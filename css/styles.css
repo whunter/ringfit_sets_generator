@@ -1,0 +1,46 @@
+body, select, button {
+  font-size: 24px;
+  font-family: Helvetica Neue,Roboto,Arial,sans-serif;
+}
+
+.content {
+  width: 80%;
+  margin: 0 10%;
+  text-align: center;
+}
+label {
+  display: block;
+  margin-bottom: 20px;
+}
+
+#sets-display {
+  /* Grid Fallback */
+  display: flex;
+  flex-wrap: wrap;
+  
+  /* Supports Grid */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-auto-rows: minmax(150px, auto);
+  grid-gap: 1em;
+  margin-top: 20px
+}
+
+#sets-display img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  
+  /* Flex Fallback */
+  margin-left: 5px;
+  margin-right: 5px;
+  flex: 1 1 200px;
+}
+
+@supports (display: grid) {
+  .module {
+    margin: 0;
+  }
+}
+
